@@ -12,7 +12,8 @@
     height: 60px; /*Define a altura de um elemento*/   
 }
 .menu {
-    width: 1200px;
+    width: 95%;
+    max-width: 1200px;
     height: 60px;
     /* background-color:#ccc; */
     margin: auto;
@@ -50,7 +51,8 @@
     background-position: bottom;
 }
 .content {
-    width: 1200px;
+    width: 95%;
+    max-width: 1200px;
     height: 100%;
     /* background-color: rgba(255, 255, 255, 0.5); */
     margin: auto;
@@ -97,9 +99,12 @@
 .artigo-sobre {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .artigo-sobre img {
-    width: 500px;
+    width: 45%;
+    max-width: 500px;
+    min-width: 450px;
 }
 .artigo-text-sobre {
     width: 600px;
@@ -181,4 +186,40 @@
     position: absolute;
     right: -10px;
     top: -30px;   
+}
+@media screen and (max-width: 1199px){
+    .sobre {
+        height: auto;
+        padding-bottom: 4em;
+    }
+    .sobre .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .artigo-sobre {
+        justify-content: center;
+    }
+    .artigo-sobre img {
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 2em;
+    }
+    .artigo-text-sobre {
+        width: 800px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .artigo-sobre img {
+        max-width: 700px;
+    }
+    .artigo-text-sobre {
+        width: 90%;
+    }
+    .info-card {
+        text-align: center;
+    }
+    .info p {
+        width: 220px;
+    }
 }
